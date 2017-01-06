@@ -1,10 +1,10 @@
 
 
-	angular
-	  .module('thinkster', ['thinkster.routes',
-	  						'thinkster.authentication',
-	  						'thinkster.config'
-	  						]);
+angular
+  .module('thinkster', ['thinkster.routes',
+  						'thinkster.authentication',
+  						'thinkster.config'
+  						]);
 
 
 angular
