@@ -4,7 +4,7 @@ from models import Account
 from serializers import AccountSerializer
 from rest_framework.response import Response
 from permissions import IsAccountOwner
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 
@@ -77,6 +77,28 @@ class LoginView(views.APIView):
 				'status': 'Unauthorized',
 				'message':'Email/Password combination is invalid'
 				}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+class LogoutView(views.APIView):
+
+	permission_classes = (permissions.IsAuthenticated, )
+
+	def post(self, request, format=None):
+
+		logout(request)
+
+		return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
