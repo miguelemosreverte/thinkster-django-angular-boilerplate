@@ -5,6 +5,7 @@ angular
   						'thinkster.authentication',
   						'thinkster.config',
   						'thinkster.layout',
+  						'thinkster.posts',
   						]);
 
 
