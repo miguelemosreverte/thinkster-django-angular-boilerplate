@@ -6,6 +6,7 @@ angular
   						'thinkster.config',
   						'thinkster.layout',
   						'thinkster.posts',
+  						'thinkster.utils',
   						]);
 
 
