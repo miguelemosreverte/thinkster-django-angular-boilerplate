@@ -11,13 +11,15 @@
 
 		var vm = this;
 
-		var posts = []
+		vm.posts = []
 
 		vm.isAuthenticated = Authentication.isAuthenticated();
 
 		activate();
 
 		function activate(){
+
+
 
 			Posts.all().then(postsSuccessFn, postsErrorFn);
 
@@ -31,11 +33,12 @@
 			});
 
 			function postsSuccessFn(data, status, headers, config){
-				vm.posts = data.data
+				vm.posts = data.data;
+				console.log(vm.posts);
 			}
 
 			function postsErrorFn(data, status, headers, config){
-				Snackbar.error(data.error)
+				Snackbar.error(data.error);
 			}
 		}
 	}

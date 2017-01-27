@@ -8,11 +8,11 @@
 	function post(){
 
 		var directive = {
-			restrict: 'E'
+			restrict: 'E',
 			scope : {
 				post:'='
 			},
-			templateUrl: 'static/templates/posts/post.html'
+			templateUrl: '/static/templates/posts/post.html'
 		};
 
 		return directive;
