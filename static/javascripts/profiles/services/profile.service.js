@@ -5,9 +5,9 @@
 		.module('thinkster.profiles.services')
 		.factory('Profile', Profile);
 
-	Profile.$inject = ['$http'];
+	Profile.$inject = ['$http', 'Authentication'];
 
-	function Profile($http){
+	function Profile($http, Authentication){
 
 		var Profile = {
 			destroy : destroy,
@@ -18,7 +18,7 @@
 		return Profile;
 
 		function destroy(profile){
-			return $http.delete('/api/v1/accounts/' + profile.id + '/');
+			return $http.delete('/api/v1/accounts/' + profile.username + '/');
 		}
 
 		function get(username){
@@ -26,7 +26,7 @@
 		}
 
 		function update(profile){
-			return $http.put('/api/v1/accounts/' + profile.username + '/', profile);
+			return $http.put('/api/v1/accounts/' + Authentication.getAuthenticatedAccount().username + '/', profile);
 		}
 	}
 })();

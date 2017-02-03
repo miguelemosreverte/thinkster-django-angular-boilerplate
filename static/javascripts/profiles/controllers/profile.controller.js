@@ -2,7 +2,7 @@
 	'use-strict';
 
 	angular
-		.module('thinkster.controllers')
+		.module('thinkster.profiles.controllers')
 		.controller('ProfileController', ProfileController);
 
 	ProfileController.$inject = ['$location', '$routeParams', 'Posts', 'Profile', 'Snackbar'];
