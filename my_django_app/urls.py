@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url, include
 
-from thinkster_django_angular_boilerplate.views import IndexView
+from my_django_app.views import IndexView
 from rest_framework_nested import routers
 from authentication.views import AccountViewSet, LoginView, LogoutView
 from posts.views import PostViewSet, AccountPostsViewSet
