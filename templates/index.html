@@ -11,11 +11,22 @@
 <body>
   {% include 'navbar.html' %}
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 ng-view"></div>
-    </div>
-  </div>
+
+  <table class="main-table">
+   <tr>
+      <td>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-12 ng-view"></div>
+            </div>
+          </div>
+      </td>
+      <td>
+         Content of the second column.
+      </td>
+   </tr>
+</table>
 
   {% include 'javascripts.html' %}
 </body>
